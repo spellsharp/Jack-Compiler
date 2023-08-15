@@ -8,7 +8,7 @@ public class JavaTokenizer {
 
             if (args.length == 0) {
                 System.out.println("Running with a default file. Please enter the name correctly next time.");
-                inputFilename = "/home/shrisharanyan/03_College/EOC/Compiler/Tokenizer/inputFiles/Main.jack";
+                inputFilename = "./inputFiles/Main.jack";
             } else {
                 inputFilename = args[0];
             }
@@ -16,7 +16,7 @@ public class JavaTokenizer {
             File inputFile = new File(inputFilename);
             Scanner scanner = new Scanner(inputFile);
             String outputFilename = "outputFiles/"
-                    + inputFilename.substring(inputFilename.lastIndexOf("/"), inputFilename.indexOf(".")) + ".xml";
+                    + inputFilename.substring(inputFilename.lastIndexOf("/"), inputFilename.lastIndexOf(".")) + ".xml";
             File outputFile = new File(outputFilename);
             BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile));
 
